@@ -1,0 +1,18 @@
+<%= form_for(@meetup) do |f| %>
+  <ul>
+  <% @meetup.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p align="center">
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+  <p align= "center">
+    <%= f.label :description %><br/>
+    <%= f.text_area :body %>
+  </p>
+  <p align= "center">
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,15 @@
+<div>
+<h1>The MeetUp Community</h1>
+
+<ul id="meetups">
+  <% @meetups.each do |meetup| %>
+    <li>
+      <%= link_to meetup.title, meetup_path(meetup) %>
+    </li>
+  <% end %>
+  <!-- <a href="/meetups/1">First Meetup Idea</a> -->
+</ul>
+<span class="link">
+  <%= link_to "Create a New Meetup Idea", new_meetup_path, class: "new_meetups" %>
+</span>
+</div>

@@ -1,0 +1,13 @@
+<div>
+<h1 align="center"><%= @meetup.title %></h1>
+<p><%= @meetup.body %></p>
+
+<%= render partial: 'comments/form' %>
+<h3>Comments</h3>
+<%= render partial: 'meetups/comment', collection: @meetup.comments %>
+
+<span class="link"><%= link_to "<< Back to Meetup List", meetups_path %> |
+<%= link_to "Delete", meetup_path(@meetup), method: :delete, data: {confirm: "Do you really want to delete that Meetup Idea?"} %> | <%= link_to "Edit", edit_meetup_path(@meetup) %></span>
+
+
+</div>

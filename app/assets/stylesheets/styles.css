@@ -1,0 +1,84 @@
+h1 {
+	border-top-right-radius: 20px 15px;
+	border-top-left-radius: 20px 15px;
+	border-bottom-left-radius: 20px 15px;
+	border-bottom-right-radius: 20px 15px; 
+	text-align: center;
+	font-size: 100px;
+	background-color: pink;
+	font-family: "Calibri", calibri, serif;
+	color: white;
+}
+
+p {
+	border-top-right-radius: 20px 15px;
+	border-top-left-radius: 20px 15px;
+	border-bottom-left-radius: 20px 15px;
+	border-bottom-right-radius: 20px 15px; 
+    font-family: font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	color: black;
+	font-size: 40px;
+	background-color: #66FF99;
+}
+
+div {
+	border-top-right-radius: 20px 15px;
+	border-top-left-radius: 20px 15px;
+	border-bottom-left-radius: 20px 15px;
+	border-bottom-right-radius: 20px 15px; 
+	font-size: 20px;
+	background-color: #CCFFCC;
+}
+
+html {
+	background-image:url('http://www.authenticjobs.com/logos/meetup_1330975215.png');
+		/*background-color: #66FFFF*/
+}
+
+ul {
+	border-top-right-radius: 20px 15px;
+	border-top-left-radius: 20px 15px;
+	border-bottom-left-radius: 20px 15px;
+	border-bottom-right-radius: 20px 15px; 
+	font-family: "Lucida Bright", Georgia, serif;
+	background-color: #66FF99;
+	font-size: 40px;
+	color: black;
+}
+
+body {
+	font-color: red;
+}
+
+span {
+	background-color: #66FF99;
+}
+
+span.center {
+	border-top-right-radius: 20px 15px;
+	border-top-left-radius: 20px 15px;
+	border-bottom-left-radius: 20px 15px;
+	border-bottom-right-radius: 20px 15px; 
+	background-color: #FFFF99;
+	font-size: 40px;
+}
+
+span.title {
+	font-size: 50px;
+    border-top-right-radius: 20px 15px;
+	border-top-left-radius: 20px 15px;
+	border-bottom-left-radius: 20px 15px;
+	border-bottom-right-radius: 20px 15px; 
+     background-color: #66FF33;
+     text-align: center;
+}
+
+span.link {
+	border-top-right-radius: 20px 15px;
+	border-top-left-radius: 20px 15px;
+	border-bottom-left-radius: 20px 15px;
+	border-bottom-right-radius: 20px 15px; 
+	background-color: #99CCFF;
+	font-size: 20px;
+}
+

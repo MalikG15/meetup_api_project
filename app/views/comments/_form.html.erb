@@ -1,0 +1,15 @@
+<div>
+<span class="title">Post a Comment</span>
+
+<%= form_for [ @meetup, @comment ] do |f| %>
+  <span class="center">
+    <%= f.label :author_name, "Your Name" %>  </span> <br> 
+    <%= f.text_field :author_name %></br>
+     <span class="center">
+    <%= f.label :body, "Your Comment" %> </span><br>
+    <%= f.text_area :body %></br>
+   
+    <%= f.submit 'Submit' %>
+  
+<% end %>
+</div>
