@@ -1,13 +1,23 @@
 <div>
 <h1 align="center"><%= @meetup.title %></h1>
-<p><%= @meetup.body %></p>
+<p class="image"><%= image_tag @meetup.image.url(:medium) %></p><p>
+<%= @meetup.body %></p>
 
+<span class="center">
+  Tags:
+  <% @meetup.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
+</span>
+
+<p> </p>
+<% if logged_in? %>
 <%= render partial: 'comments/form' %>
+<% end %>
 <h3>Comments</h3>
 <%= render partial: 'meetups/comment', collection: @meetup.comments %>
-
+<% if logged_in? %>
 <span class="link"><%= link_to "<< Back to Meetup List", meetups_path %> |
 <%= link_to "Delete", meetup_path(@meetup), method: :delete, data: {confirm: "Do you really want to delete that Meetup Idea?"} %> | <%= link_to "Edit", edit_meetup_path(@meetup) %></span>
-
-
+<% end %>
 </div>

@@ -1,5 +1,5 @@
 <div>
-<h1>The MeetUp Community</h1>
+<h1 class="home">The MeetUp Community</h1>
 
 <ul id="meetups">
   <% @meetups.each do |meetup| %>
@@ -7,9 +7,14 @@
       <%= link_to meetup.title, meetup_path(meetup) %>
     </li>
   <% end %>
+
+  <% @result %>
+  
   <!-- <a href="/meetups/1">First Meetup Idea</a> -->
-</ul>
+<!-- </ul> -->
 <span class="link">
+	<% if logged_in? %>
   <%= link_to "Create a New Meetup Idea", new_meetup_path, class: "new_meetups" %>
+  <% end %>
 </span>
 </div>

@@ -1,3 +1,15 @@
+h1.home {
+    border-top-right-radius: 20px 15px;
+	border-top-left-radius: 20px 15px;
+	border-bottom-left-radius: 20px 15px;
+	border-bottom-right-radius: 20px 15px; 
+	text-align: center;
+	font-size: 100px;
+	background-color: pink;
+	font-family: "Calibri", calibri, serif;
+	color: white;
+}
+
 h1 {
 	border-top-right-radius: 20px 15px;
 	border-top-left-radius: 20px 15px;
@@ -15,7 +27,7 @@ p {
 	border-top-left-radius: 20px 15px;
 	border-bottom-left-radius: 20px 15px;
 	border-bottom-right-radius: 20px 15px; 
-    font-family: font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    font-family: font-family: "Lucida Bright", Georgia, serif;
 	color: black;
 	font-size: 40px;
 	background-color: #66FF99;
@@ -31,8 +43,9 @@ div {
 }
 
 html {
-	background-image:url('http://www.authenticjobs.com/logos/meetup_1330975215.png');
+	/*background-image:url('http://www.authenticjobs.com/logos/meetup_1330975215.png');*/
 		/*background-color: #66FFFF*/
+	background-color: white;
 }
 
 ul {
@@ -74,11 +87,20 @@ span.title {
 }
 
 span.link {
+	 color: #333;
+    box-shadow: -3px 3px orange, -2px 2px orange, -1px 1px orange;
+    border: 1px solid orange;
+}
+
+span.comment {
+	background-color: #99CCFF;
 	border-top-right-radius: 20px 15px;
 	border-top-left-radius: 20px 15px;
 	border-bottom-left-radius: 20px 15px;
 	border-bottom-right-radius: 20px 15px; 
-	background-color: #99CCFF;
 	font-size: 20px;
 }
 
+p.image {
+	background-color: #CCFFCC;
+}

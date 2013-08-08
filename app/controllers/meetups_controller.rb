@@ -1,6 +1,11 @@
 class MeetupsController < ApplicationController
   def index
     @meetups = Meetup.all
+    RMeetup::Client.api_key = "327d17387a4c7e45265d1265ea1f"
+    @results = RMeetup::Client.fetch(:events, {:zip => "11207", :topic => "moms", :order => "time"})
+    @results.each do |result|
+    result
+      end
   end
 
   def new
@@ -10,6 +15,7 @@ class MeetupsController < ApplicationController
   def show
     @meetup = Meetup.find(params[:id])
     @comment = Comment.new
+    @tag = Tag.new
     @comment.meetup_id = @meetup.id
   end
 
@@ -39,7 +45,7 @@ class MeetupsController < ApplicationController
   end
 
   def meetup_params
-    params.require(:meetup).permit(:title, :body)
+    params.require(:meetup).permit(:title, :body, :tag_list, :image)
   end
 
 

@@ -1,4 +1,5 @@
-<%= form_for(@meetup) do |f| %>
+<%= form_for(@meetup, html: {multipart: true}) do |f| %>
+
   <ul>
   <% @meetup.errors.full_messages.each do |error| %>
     <li><%= error %></li>
@@ -12,6 +13,17 @@
     <%= f.label :description %><br/>
     <%= f.text_area :body %>
   </p>
+  <p align="center">
+  <%= f.label :tag_list %><br />
+  <%= f.text_field :tag_list %>
+</p>
+<p align="center">
+  <% if @meetup.image.exists? %>
+      <%= image_tag @meetup.image.url %><br/>
+  <% end %>
+  <%= f.label :image, "Attach an Image" %><br />
+  <%= f.file_field :image %>
+</p>
   <p align= "center">
     <%= f.submit %>
   </p>

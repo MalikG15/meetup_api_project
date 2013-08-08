@@ -1,0 +1,7 @@
+<h1 align="center">Meetups tagged with "<%= @tag.name %>"</h1>
+
+<ul>
+  <% @tag.meetups.each do |meetup| %>
+    <li><%= link_to meetup.title, meetup_path(meetup) %></li>
+  <% end %>
+</ul>

@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130807190855) do
+ActiveRecord::Schema.define(version: 20130808154311) do
+
+  create_table "authors", force: true do |t|
+    t.string   "username",         null: false
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "comments", force: true do |t|
     t.string   "author_name"
@@ -26,6 +35,26 @@ ActiveRecord::Schema.define(version: 20130807190855) do
   create_table "meetups", force: true do |t|
     t.string   "title"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "taggings", force: true do |t|
+    t.integer  "tag_id"
+    t.integer  "meetup_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "taggings", ["meetup_id"], name: "index_taggings_on_meetup_id"
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
