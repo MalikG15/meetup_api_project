@@ -22,6 +22,13 @@ h1 {
 	color: white;
 }
 
+h1.find {
+	background-color: pink;
+	text-align: center;
+	color: white;
+	font-size: 30px;
+}
+
 p {
 	border-top-right-radius: 20px 15px;
 	border-top-left-radius: 20px 15px;
@@ -89,7 +96,7 @@ span.title {
 span.link {
 	 color: #333;
     box-shadow: -3px 3px orange, -2px 2px orange, -1px 1px orange;
-    border: 1px solid orange;
+    border: 1px orange;
 }
 
 span.comment {
@@ -104,3 +111,4 @@ span.comment {
 p.image {
 	background-color: #CCFFCC;
 }
+

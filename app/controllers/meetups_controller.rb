@@ -1,4 +1,6 @@
 class MeetupsController < ApplicationController
+ 
+
   def index
     @meetups = Meetup.all
 
@@ -48,6 +50,4 @@ class MeetupsController < ApplicationController
   def meetup_params
     params.require(:meetup).permit(:title, :body, :tag_list, :image)
   end
-
-
 end

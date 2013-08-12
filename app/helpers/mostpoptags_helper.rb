@@ -1,0 +1,2 @@
+module MostpoptagsHelper
+end

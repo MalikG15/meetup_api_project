@@ -61,6 +61,7 @@ Meetups::Application.routes.draw do
   resources :author_sessions, only: [ :new, :create, :destroy ]
   resources :memorial_park
   resources :jhouse
+  resources :mostpoptags
   
   get 'login'  => 'author_sessions#new'
   get 'logout' => 'author_sessions#destroy'
