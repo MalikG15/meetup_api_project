@@ -3,6 +3,8 @@ class Meetup < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings
   has_attached_file :image, styles: { medium: "1000x1000>", thumb: "100x100>" }
+  validates :title, presence: true, uniqueness: true
+  # validates :content, presence: true
 
   def tag_list
     self.tags.collect do |tag|
@@ -15,4 +17,9 @@ class Meetup < ActiveRecord::Base
     new_or_found_tags = tag_names.collect { |name| Tag.find_or_create_by(name: name) }
     self.tags = new_or_found_tags
   end 
+
+  def self.search(query)
+    # where(:title, query) -> This would return an exact match of the query
+    where("title like ?", "%#{query}%") 
+  end
 end

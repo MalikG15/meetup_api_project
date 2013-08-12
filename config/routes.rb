@@ -57,8 +57,11 @@ Meetups::Application.routes.draw do
   resources :tags
   resources :authors
   resources :mostpopular
+  resources :frelinghuysen_arboretum
   resources :author_sessions, only: [ :new, :create, :destroy ]
-
+  resources :memorial_park
+  resources :jhouse
+  
   get 'login'  => 'author_sessions#new'
   get 'logout' => 'author_sessions#destroy'
   resources :meetups do
