@@ -56,6 +56,7 @@ Meetups::Application.routes.draw do
   root to: 'meetups#index'
   resources :tags
   resources :authors
+  resources :mostpopular
   resources :author_sessions, only: [ :new, :create, :destroy ]
 
   get 'login'  => 'author_sessions#new'

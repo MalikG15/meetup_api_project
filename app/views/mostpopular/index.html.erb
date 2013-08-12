@@ -1,0 +1,8 @@
+<h1> Most Popular by Comments<h1>
+
+<ul id="meetups">
+  <% @sorted_meetups.each do |meetup| %>
+    <li>
+      <%= link_to meetup.title, meetup_path(meetup) %>
+    </li>
+  <% end %>

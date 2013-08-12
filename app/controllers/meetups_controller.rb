@@ -3,10 +3,14 @@ class MeetupsController < ApplicationController
     @meetups = Meetup.all
     RMeetup::Client.api_key = "327d17387a4c7e45265d1265ea1f"
     @results = RMeetup::Client.fetch(:events, {:zip => "11207", :topic => "moms", :order => "time"})
-    @results.each do |result|
-    result
-      end
-  end
+    @event = {}
+
+    @results[1].event.keys.each do |key|
+      @event[key] = @results[3].event[key]
+    end
+      throw @event
+    @show = @event["description", "venue_city"]
+   end
 
   def new
     @meetup = Meetup.new
