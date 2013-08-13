@@ -59,8 +59,6 @@ Meetups::Application.routes.draw do
   resources :mostpopular
   resources :frelinghuysen_arboretum
   resources :author_sessions, only: [ :new, :create, :destroy ]
-  resources :memorial_park
-  resources :jhouse
   resources :mostpoptags
   
   get 'login'  => 'author_sessions#new'

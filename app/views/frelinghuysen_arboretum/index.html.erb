@@ -1,10 +1,12 @@
 <div>
-<h1> Frelinghyusen Arboretum Meetup</h1>
+<h1> <%= @group_name %></h1>
 <%= @show %>
 <%= @address %>
 <%= @time %>
-<p>Lets <!-- me and --> take a stroll around the Frelinghuysen Arboretum.The Frelinghuysen Arboretum offers gardens, open fields,woodland and groves of flowering trees that bring serenity to our harried lives. Begin this stroll by exiting The Haggerty Education Center doors and walk up the driveway towards the mansion. The view from the porte-cochere with its expansive Great Lawn frequentlyused for picnics. We cam stop somewhere near here and have a picnic lunch with the kids. Please pack a blanket and food.
-</p>
+<%= @name %>
+<%= @meetup_link %>
+<%= @guest_limit %>
+ <%= sanitize @description %>
 <%= @last_updated %>
 <%= @rsvpcount %>
 <%= %>

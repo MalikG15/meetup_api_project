@@ -16,5 +16,7 @@ class FrelinghuysenArboretumController < ApplicationController
     @name = @event["name"]
     @meetup_link = @event["event_url"]
     @guest_limit = @event["guest_limit"]
+    @group_name = @event["group_name"]
+    @description = @event["description"]
   end 
 end

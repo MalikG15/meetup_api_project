@@ -49,13 +49,13 @@ class MeetupsController < ApplicationController
   def upvote
     @meetup = Meetup.find(params[:id])
     @meetup.liked_by current_user
-    redirect_to @meetup, :notice => "#{@meetup.votes.size} person(s) like this!"
+    redirect_to @meetup, :notice => "You like this, #{@meetup.votes.size} person(s) total like this!"
   end
 
   def downvote
     @meetup = Meetup.find(params[:id])
     @meetup.downvote_from current_user
-    redirect_to @meetup, :notice => "#{@meetup.votes.size} person(s) dislike this"
+    redirect_to @meetup, :notice => "You like this, #{@meetup.votes.size} person(s) total dislike this"
   end
 
   def meetup_params
