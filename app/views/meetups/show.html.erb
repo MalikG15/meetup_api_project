@@ -18,6 +18,6 @@
 <%= render partial: 'meetups/comment', collection: @meetup.comments %>
 <% if logged_in? %>
 <span class="link"><%= link_to "<< Back to Meetup List", meetups_path %> |
-<%= link_to "Delete", meetup_path(@meetup), method: :delete, data: {confirm: "Do you really want to delete that Meetup Idea?"} %> | <%= link_to "Edit", edit_meetup_path(@meetup) %></span>
+<%= link_to "Delete", meetup_path(@meetup), method: :delete, data: {confirm: "Do you really want to delete that Meetup Idea?"} %> | <%= link_to "Edit", edit_meetup_path(@meetup) %> <!-- | <%= link_to 'Like', like_meetup_path(@meetup)%></span> --> | <%= link_to "Upvote", like_meetup_path(@meetup, method: :put) %> | <%= link_to "Downvote", dislike_meetup_path(@meetup, method: :put) %>
 <% end %>
 </div>

@@ -67,6 +67,10 @@ Meetups::Application.routes.draw do
   get 'logout' => 'author_sessions#destroy'
   resources :meetups do
     resources :comments
+    member do
+      get "like", to: "meetups#upvote"
+      get "dislike", to: "meetups#downvote"
+    end
 
   end
 end

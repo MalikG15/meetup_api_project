@@ -1,5 +1,4 @@
 class MeetupsController < ApplicationController
- 
 
   def index
     @meetups = Meetup.all
@@ -45,6 +44,18 @@ class MeetupsController < ApplicationController
     @meetup = Meetup.new(meetup_params)
     @meetup.save
     redirect_to meetup_path(@meetup)
+  end
+
+  def upvote
+    @meetup = Meetup.find(params[:id])
+    @meetup.liked_by current_user
+    redirect_to @meetup, :notice => "#{@meetup.votes.size} person(s) like this!"
+  end
+
+  def downvote
+    @meetup = Meetup.find(params[:id])
+    @meetup.downvote_from current_user
+    redirect_to @meetup, :notice => "#{@meetup.votes.size} person(s) dislike this"
   end
 
   def meetup_params

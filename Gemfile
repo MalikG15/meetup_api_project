@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'sorcery'
 gem 'rMeetup'
+gem 'acts_as_votable', '0.6.0'
+# gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
