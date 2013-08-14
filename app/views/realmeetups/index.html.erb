@@ -1,13 +1,46 @@
-<div>
+
 <h1> <%= @group_name %></h1>
-<%= @show %>
-<%= @address %>
-<%= @time %>
-<%= @name %>
-<%= @guest_limit %>
+
+<span class="group">
+Venue Name: <%= @show %>
+</span>
+<br>
+<span class="group">
+Adress: <%= @address %>
+</span>
+</br>
+<br>
+<span class="group">
+Time of Event: <%= @time %>
+</span>
+</br>
+<br>
+<span class="group">
+Group Name: <%= @name %>
+</span>
+</br>
+<br>
+<span class="group">
+Guest Limit: <%=  @guest_limit %>
+</span>
+</br>
+<span class="group">
  <%= sanitize @description %>
-<%= @last_updated %>
-<%= @rsvpcount %>
-<%= @payment_required %>
-ruby bin/rake routes
-</div>
+</span>
+ <br>
+ <span class="group">
+Last Update: <%=  @last_updated %>
+</span>
+</br>
+<br>
+<span class="group">
+Current RSVP count: <%= @rsvpcount %>
+</span>
+</br>
+<br>
+<span class="group">
+Payment Required: <%= @payment_required %>
+</span>
+</br>
+<!-- ruby bin/rake routes -->
+

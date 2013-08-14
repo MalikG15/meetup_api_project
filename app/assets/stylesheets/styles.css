@@ -112,3 +112,12 @@ p.image {
 	background-color: #CCFFCC;
 }
 
+span.group {
+	border-top-right-radius: 20px 15px;
+	border-top-left-radius: 20px 15px;
+	border-bottom-left-radius: 20px 15px;
+	border-bottom-right-radius: 20px 15px; 
+	font-family: font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	background-color: salmon;
+	font-size: 40px;
+}

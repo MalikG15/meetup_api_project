@@ -1,7 +1,7 @@
 class RealmeetupsController < ApplicationController
   def index
    RMeetup::Client.api_key = "327d17387a4c7e45265d1265ea1f";
-    @results = RMeetup::Client.fetch(:events, {:zip => "11207", :topic => "movies", :order => "time"})
+    @results = RMeetup::Client.fetch(:events, {:zip => "11207", :topic => "technology", :order => "time"})
     @event = {}
 
     @results[1].event.keys.each do |key|
